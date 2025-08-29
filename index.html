@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Learning Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JavaScript Learning Project</h1>
+            <p class="subtitle">Demonstrating Variables, Conditionals, Functions, Loops, and DOM Interactions</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="card">
+                <h2>Part 1: Variables & Conditionals</h2>
+                <p>JavaScript variables are declared using <span class="highlight">let</span>, <span class="highlight">const</span>, or <span class="highlight">var</span>.</p>
+                
+                <div class="code-block">
+                    // Variable declarations<br>
+                    let score = 85;<br>
+                    const passingGrade = 60;<br>
+                    var message = "";<br><br>
+                    
+                    // Conditional statements<br>
+                    if (score >= 90) {<br>
+                    &nbsp;&nbsp;message = "Excellent!";<br>
+                    } else if (score >= passingGrade) {<br>
+                    &nbsp;&nbsp;message = "You passed!";<br>
+                    } else {<br>
+                    &nbsp;&nbsp;message = "Please try again.";<br>
+                    }
+                </div>
+                
+                <div class="interaction">
+                    <p>Try changing the score value:</p>
+                    <input type="range" id="scoreSlider" min="0" max="100" value="85">
+                    <p>Current score: <span id="currentScore">85</span></p>
+                    <button id="checkScoreBtn">Check Score</button>
+                    <div class="output" id="scoreOutput"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Part 2: Custom Functions</h2>
+                <p>Functions are reusable blocks of code that perform a specific task.</p>
+                
+                <div class="code-block">
+                    // Function to calculate area of a rectangle<br>
+                    function calculateArea(width, height) {<br>
+                    &nbsp;&nbsp;return width * height;<br>
+                    }<br><br>
+                    
+                    // Function to check if a number is even<br>
+                    const isEven = num => num % 2 === 0;
+                </div>
+                
+                <div class="interaction">
+                    <p>Try the functions:</p>
+                    <input type="number" id="widthInput" placeholder="Width" value="5">
+                    <input type="number" id="heightInput" placeholder="Height" value="10">
+                    <button id="calculateAreaBtn">Calculate Area</button>
+                    
+                    <input type="number" id="numberInput" placeholder="Enter a number" value="7">
+                    <button id="checkEvenBtn">Check Even/Odd</button>
+                    
+                    <div class="output" id="functionOutput"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Part 3: Loops</h2>
+                <p>Loops execute a block of code multiple times.</p>
+                
+                <div class="code-block">
+                    // For loop example<br>
+                    for (let i = 0; i < 5; i++) {<br>
+                    &nbsp;&nbsp;console.log("Iteration: " + i);<br>
+                    }<br><br>
+                    
+                    // While loop example<br>
+                    let count = 0;<br>
+                    while (count < 3) {<br>
+                    &nbsp;&nbsp;console.log("Count: " + count);<br>
+                    &nbsp;&nbsp;count++;<br>
+                    }
+                </div>
+                
+                <div class="interaction">
+                    <p>Try the loops:</p>
+                    <button id="runForLoopBtn">Run For Loop</button>
+                    <button id="runWhileLoopBtn">Run While Loop</button>
+                    <div class="output" id="loopOutput"></div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h2>Part 4: DOM Interactions</h2>
+                <p>The Document Object Model (DOM) allows JavaScript to interact with HTML.</p>
+                
+                <div class="code-block">
+                    // Changing text content<br>
+                    document.getElementById('text').textContent = 'New text!';<br><br>
+                    
+                    // Changing styles<br>
+                    document.getElementById('box').style.backgroundColor = 'blue';<br><br>
+                    
+                    // Handling button clicks<br>
+                    button.addEventListener('click', function() {<br>
+                    &nbsp;&nbsp;alert('Button clicked!');<br>
+                    });
+                </div>
+                
+                <div class="interaction">
+                    <p>Try these DOM interactions:</p>
+                    <button id="changeTextBtn">Change Text</button>
+                    <button id="changeColorBtn">Change Color</button>
+                    <button id="addElementBtn">Add New Element</button>
+                    
+                    <div class="output" id="domOutput">
+                        <p id="text">Original text content</p>
+                        <div id="box" style="width: 100px; height: 100px; background-color: #6a11cb; margin: 10px 0;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>This project demonstrates JavaScript fundamentals including variables, conditionals, functions, loops, and DOM interactions.</p>
+            <p>All code is separated into HTML, CSS, and JavaScript files in the same folder.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
